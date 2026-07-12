@@ -1,78 +1,132 @@
-# Pricing & Revenue Optimization Analytics Project 📊
+# Retail Pricing & Revenue Optimization Analytics
 
-This project focus on maximizing revenue and profit margins using data-driven pricing strategies. It combines advanced retail analytics, price elasticity modeling, and competitor benchmarking to provide actionable pricing recommendations.
+## Project Overview
 
-## 🚀 Project Overview
+This project analyzes retail sales data to support pricing and revenue optimization using Python-based data analytics. It focuses on understanding customer price sensitivity, identifying high-value products, comparing product prices with competitors, and evaluating inventory levels to support better business decisions.
 
-The core objective is to analyze sales data to identify price sensitivity, segment products based on their contribution to revenue, and simulate the impact of price changes on total revenue.
-
-### Key Features
-*   **Price Elasticity Modeling**: Quantifying how changes in price affect demand using log-log regression concepts.
-*   **SKU Segmentation (Pareto/ABC Analysis)**: Identifying "Category A" products that drive 80% of revenue.
-*   **What-If Revenue Simulation**: Predicting revenue outcomes for various price change scenarios (e.g., -10% to +20%).
-*   **Market Benchmarking**: Comparing internal pricing against competitor data to identify market positioning (Premium vs. Discounted).
-*   **Inventory Risk Assessment**: Linking pricing strategy with stock levels to avoid stockouts on high-velocity items.
+The project generates a synthetic retail dataset and performs multiple analyses that help estimate the impact of pricing strategies on revenue and product performance.
 
 ---
 
-## 📂 Project Structure
+## Objectives
+
+- Generate a realistic retail sales dataset for analysis.
+- Analyze customer demand using price elasticity.
+- Identify high-revenue products using Pareto (ABC) segmentation.
+- Compare product pricing with market competitors.
+- Assess inventory sufficiency for different products.
+- Simulate revenue under different pricing scenarios.
+
+---
+
+## Project Structure
 
 ```text
-├── data/                       # Generated and processed datasets
-│   ├── raw_sales_data.csv
+Pricing-Revenue-Optimization/
+│
+├── data/
+│   ├── sales_data.csv
 │   ├── processed_sales_data.csv
 │   ├── sku_segmentation.csv
 │   ├── sku_elasticity.csv
 │   ├── revenue_simulation.csv
+│   ├── competitor_data.csv
 │   ├── competitor_analysis.csv
 │   └── inventory_sufficiency.csv
-├── scripts/                    # Python analysis pipeline
-│   ├── generate_data.py        # Synthesizes realistic retail datasets
-│   ├── analyze_segments.py     # Performs Pareto/ABC segmentation
-│   ├── analyze_elasticity.py   # Calculates price elasticity coefficients
-│   └── analyze_market_inventory.py # Competitor and inventory risk analysis
-└── README.md                   # Project documentation
+│
+├── scripts/
+│   ├── generate_data.py
+│   ├── analyze_segments.py
+│   ├── analyze_elasticity.py
+│   └── analyze_market_inventory.py
+│
+└── README.md
 ```
 
 ---
 
-## 🛠️ Getting Started
+## Features
 
-### 1. Prerequisites
-Ensure you have Python 3.8+ installed.
+### Price Elasticity Analysis
+Measures how changes in product prices influence customer demand and estimates the effect of pricing decisions on revenue.
 
-### 2. Environment Setup
-Create a virtual environment and install dependencies:
+### SKU Segmentation
+Uses Pareto (ABC) analysis to classify products based on their contribution to overall revenue and identify high-performing SKUs.
+
+### Revenue Simulation
+Evaluates different pricing scenarios and estimates their potential impact on total revenue.
+
+### Competitor Price Analysis
+Compares internal product prices with competitor pricing to understand market positioning.
+
+### Inventory Analysis
+Evaluates inventory sufficiency and identifies products that may require replenishment or pricing adjustments.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.11 or later
+- Required Python libraries:
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - scipy
+  - statsmodels
+
+Install the required packages:
+
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install pandas numpy matplotlib seaborn scipy statsmodels
 ```
 
-### 3. Data Pipeline Execution
-Run the scripts in the following order to generate the analysis:
-1.  **Generate Data**: `python scripts/generate_data.py`
-2.  **Segment SKUs**: `python scripts/analyze_segments.py`
-3.  **Analyze Elasticity**: `python scripts/analyze_elasticity.py`
-4.  **Market/Inventory Analysis**: `python scripts/analyze_market_inventory.py`
+---
+
+## Running the Project
+
+Execute the scripts in the following order:
+
+```bash
+python scripts/generate_data.py
+python scripts/analyze_segments.py
+python scripts/analyze_elasticity.py
+python scripts/analyze_market_inventory.py
+```
+
+The generated datasets and analysis results will be saved inside the **data/** directory.
 
 ---
 
-## 📈 Power BI Dashboard
+## Technologies Used
 
-The project includes a comprehensive guide to building a 4-page interactive dashboard in Power BI:
-1.  **Executive Overview**: High-level revenue and Pareto trends.
-2.  **Price Elasticity**: Scatter plots and heatmaps of price sensitivity.
-3.  **What-If Simulator**: Interactive bridge charts for revenue prediction.
-4.  **Market & Inventory**: Comparison against competitors and stock health.
-
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- SciPy
+- Statsmodels
 
 ---
 
-## 🧪 Technologies Used
-*   **Python**: Data processing and statistical modeling.
-*   **Pandas/NumPy**: Data manipulation.
-*   **Matplotlib/Seaborn**: Exploratory data visualization.
-*   **Power BI**: Interactive business intelligence reporting.
+## Business Insights Generated
 
+This project helps answer business questions such as:
 
+- Which products contribute the most to total revenue?
+- Which products are highly sensitive to price changes?
+- How do our prices compare with competitors?
+- Which products require inventory attention?
+- How can pricing changes affect future revenue?
+
+---
+
+## Future Improvements
+
+- Build an interactive Power BI dashboard for business reporting.
+- Add forecasting models for future sales prediction.
+- Connect the project to a SQL database instead of CSV files.
+- Extend the pricing simulation with additional business constraints.
